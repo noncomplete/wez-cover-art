@@ -15,15 +15,12 @@ clear
 get_cover
 
 while true; do
-  #NEW_TRACKID="$(playerctl metadata mpris:trackid)"
   NEW_ARTURL="$(playerctl metadata mpris:artUrl)"
-  #if [[ "$TRACKID" == "$NEW_TRACKID" ]]; then
   if [[ "$ARTURL" == "$NEW_ARTURL" ]]; then
     sleep 2
   else
     clear
     get_cover
-    #TRACKID="$NEW_TRACKID"
     ARTURL="$NEW_ARTURL"
   fi
 done
